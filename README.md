@@ -3,7 +3,11 @@ Azusa
 
 Azusaは、大体いい感じになるKeynoteテンプレートです。
 
-## 動作環境
+### 解説記事
+
+<http://memo.sanographix.net/post/82160791768>
+
+### 動作環境
 
 - Mac OSX Mavericks 以降
 
