@@ -3,6 +3,10 @@ Azusa
 
 Azusaは、大体いい感じになるKeynoteテンプレートです。
 
+## 動作環境
+
+- Mac OSX Mavericks 以降
+
 ## Install
 
 - `azusa.key.zip` を解凍
