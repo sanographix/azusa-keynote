@@ -5,6 +5,7 @@ Azusaは、大体いい感じになるKeynoteテンプレートです。
 
 ## Install
 
+- `azusa.key.zip` を解凍
 - `azusa.key` を Keynote で開く
 - ファイル -> テーマを保存 でテーマとして登録できる
 
