@@ -1,0 +1,106 @@
+/*
+    Main CSS
+*/
+
+@import "_normalize.less";
+@import "_mixin.less";
+@import "_variable.less";
+@import "_grid.less";
+
+/* Common Styles */
+
+// Common
+
+html,
+body {
+    font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    background: @bg;
+    color: @base;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+}
+
+a {
+    color: @link;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+        color: @hover;
+    }
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.1;
+    a,a:hover {
+        color: @base;
+        text-decoration: none;
+    }
+}
+
+// ボタン
+
+.btn {
+    .inline-block;
+    text-align: center;
+    padding: .6em 1.2em;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 90%;
+    .border-radius(3px);
+    overflow: hidden;
+    color: @base;
+    background-color: @btn;
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px solid @border;
+    &:hover {
+        color: @btn-hover;
+        border-color: @btn-hover;
+    }
+}
+
+.btn-primary {
+    background-color: @btn-primary;
+    color: #fff;
+    border: 1px solid @btn-primary;
+    &:hover {
+        background-color: @btn-primary-hover;
+        color: #fff;
+        border: 1px solid @btn-primary-hover;
+    }
+}
+
+.btn-large {
+    padding: .8em 2em;
+    font-size: 150%;
+    border-radius: 6px;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+/* End Common Styles */
+
+.section {
+    margin: 2em 0;
+}
+
+header {
+    margin: 4em 0;
+    h1 {
+        font-size: 300px;
+        margin: 0;
+        line-height: 0.9;
+    }
+
+    h2 {
+        font-size: 40px;
+        margin: 0;
+    }
+}
+
+footer {
+    margin: 0 0 2em;
+}
+
+@import "_media-queries.less";
