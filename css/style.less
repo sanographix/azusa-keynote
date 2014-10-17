@@ -32,8 +32,8 @@ a {
 
 h1,h2,h3,h4,h5,h6 {
     line-height: 1.1;
+    color: @link;
     a,a:hover {
-        color: @base;
         text-decoration: none;
     }
 }
@@ -49,14 +49,14 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 90%;
     .border-radius(3px);
     overflow: hidden;
-    color: @base;
-    background-color: @btn;
+    color: @link;
     text-decoration: none;
     font-weight: bold;
     border: 3px solid @border;
+    margin: 0 .2em;
     &:hover {
-        color: @btn-hover;
-        border-color: @btn-hover;
+        color: @hover;
+        border-color: @hover;
     }
 }
 
@@ -127,6 +127,15 @@ header {
 
 footer {
     margin: 0 0 2em;
+}
+
+div.likebox-container .fbcomments,
+div.likebox-container .fb_iframe_widget,
+div.likebox-container .fb_iframe_widget[style],
+div.likebox-container .fb_iframe_widget iframe[style],
+div.likebox-container .fbcomments iframe[style],
+div.likebox-container .fb_iframe_widget span{
+    width: 100% !important;
 }
 
 @import "_media-queries.less";
