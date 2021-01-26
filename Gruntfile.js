@@ -1,8 +1,6 @@
 module.exports = function(grunt){
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-pngmin');
 
     grunt.initConfig({
 
@@ -10,33 +8,6 @@ module.exports = function(grunt){
         paths: {
             img: 'images/',
             imgdist: 'dist/images/'
-        },
-
-        // grunt-contrib-imagemin
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= paths.img %>',
-                    src: '**/*.{jpg,gif}',
-                    dest: '<%= paths.imgdist %>'
-                }]
-            }
-        },
-
-        // pngmin
-        pngmin: {
-          compile: {
-            options: {
-              ext: '.png'
-            },
-            files: [{
-              expand: true,
-              cwd: '<%= paths.img %>',
-              src: '**/*.png',
-              dest: '<%= paths.imgdist %>'
-            }]
-          }
         },
 
         less : {
@@ -55,11 +26,6 @@ module.exports = function(grunt){
 
         watch : {
 
-            img : {
-                files: ['<%= paths.img %>**/*.{png,jpg,gif}'],
-                tasks: ['imagemin', 'tinypng']
-            },
-
             // ラベルは"less"にしてみます
             less : {
                 // "files"セクションで監視するファイルの条件を指定
@@ -77,6 +43,6 @@ module.exports = function(grunt){
     });
 
     // grunt コマンドでなにやるか指定
-    grunt.registerTask('default', ['less:dist','watch', 'imagemin', 'pngmin']);
+    grunt.registerTask('default', ['less:dist','watch']);
 
 };
